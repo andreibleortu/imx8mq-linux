@@ -1,0 +1,108 @@
+# Patch courtesy of https://github.com/niflostancu/imx-linux-builder/blob/master/patches/linux-imx8mq-power-regs.patch
+
+--- i/arch/arm64/boot/dts/freescale/imx8mq-pico-pi.dts
++++ w/arch/arm64/boot/dts/freescale/imx8mq-pico-pi.dts
+@@ -80,6 +80,7 @@ buck1: BUCK1 {
+ 				regulator-min-microvolt = <700000>;
+ 				regulator-max-microvolt = <1300000>;
+ 				regulator-boot-on;
++				regulator-always-on;
+ 				regulator-ramp-delay = <1250>;
+ 				rohm,dvs-run-voltage = <900000>;
+ 				rohm,dvs-idle-voltage = <850000>;
+@@ -91,6 +92,7 @@ buck2: BUCK2 {
+ 				regulator-min-microvolt = <700000>;
+ 				regulator-max-microvolt = <1300000>;
+ 				regulator-boot-on;
++				regulator-always-on;
+ 				regulator-ramp-delay = <1250>;
+ 				rohm,dvs-run-voltage = <1000000>;
+ 				rohm,dvs-idle-voltage = <900000>;
+@@ -101,6 +103,7 @@ buck3: BUCK3 {
+ 				regulator-min-microvolt = <700000>;
+ 				regulator-max-microvolt = <1300000>;
+ 				regulator-boot-on;
++				regulator-always-on;
+ 				rohm,dvs-run-voltage = <1000000>;
+ 			};
+ 
+@@ -109,6 +112,7 @@ buck4: BUCK4 {
+ 				regulator-min-microvolt = <700000>;
+ 				regulator-max-microvolt = <1300000>;
+ 				regulator-boot-on;
++				regulator-always-on;
+ 				rohm,dvs-run-voltage = <1000000>;
+ 			};
+ 
+@@ -117,6 +121,7 @@ buck5: BUCK5 {
+ 				regulator-min-microvolt = <700000>;
+ 				regulator-max-microvolt = <1350000>;
+ 				regulator-boot-on;
++				regulator-always-on;
+ 			};
+ 
+ 			buck6: BUCK6 {
+@@ -124,6 +129,7 @@ buck6: BUCK6 {
+ 				regulator-min-microvolt = <3000000>;
+ 				regulator-max-microvolt = <3300000>;
+ 				regulator-boot-on;
++				regulator-always-on;
+ 			};
+ 
+ 			buck7: BUCK7 {
+@@ -131,6 +137,7 @@ buck7: BUCK7 {
+ 				regulator-min-microvolt = <1605000>;
+ 				regulator-max-microvolt = <1995000>;
+ 				regulator-boot-on;
++				regulator-always-on;
+ 			};
+ 
+ 			buck8: BUCK8 {
+@@ -138,6 +145,7 @@ buck8: BUCK8 {
+ 				regulator-min-microvolt = <800000>;
+ 				regulator-max-microvolt = <1400000>;
+ 				regulator-boot-on;
++				regulator-always-on;
+ 			};
+ 
+ 			ldo1: LDO1 {
+@@ -161,6 +169,7 @@ ldo3: LDO3 {
+ 				regulator-min-microvolt = <1800000>;
+ 				regulator-max-microvolt = <3300000>;
+ 				regulator-boot-on;
++				regulator-always-on;
+ 			};
+ 
+ 			ldo4: LDO4 {
+@@ -168,6 +177,7 @@ ldo4: LDO4 {
+ 				regulator-min-microvolt = <900000>;
+ 				regulator-max-microvolt = <1800000>;
+ 				regulator-boot-on;
++				regulator-always-on;
+ 			};
+ 
+ 			ldo5: LDO5 {
+@@ -175,6 +185,7 @@ ldo5: LDO5 {
+ 				regulator-min-microvolt = <1800000>;
+ 				regulator-max-microvolt = <3300000>;
+ 				regulator-boot-on;
++				regulator-always-on;
+ 			};
+ 
+ 			ldo6: LDO6 {
+@@ -182,6 +193,7 @@ ldo6: LDO6 {
+ 				regulator-min-microvolt = <900000>;
+ 				regulator-max-microvolt = <1800000>;
+ 				regulator-boot-on;
++				regulator-always-on;
+ 			};
+ 
+ 			ldo7: LDO7 {
+@@ -189,6 +201,7 @@ ldo7: LDO7 {
+ 				regulator-min-microvolt = <1800000>;
+ 				regulator-max-microvolt = <3300000>;
+ 				regulator-boot-on;
++				regulator-always-on;
+ 			};
+ 		};
+ 	};
