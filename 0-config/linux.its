@@ -1,0 +1,47 @@
+/dts-v1/;
+
+/ {
+    description = "Linux FIT image for Pico Pi";
+    #address-cells = <1>;
+
+    images {
+        kernel {
+            description = "Linux kernel";
+            data = /incbin/("Image");
+            type = "kernel";
+            arch = "arm64";
+            os = "linux";
+            compression = "none";
+            load = <KERNEL_LOAD_ADDR>;
+            entry = <KERNEL_LOAD_ADDR>;
+        };
+        fdt {
+            description = "Device tree";
+            data = /incbin/("LINUX_DTB");
+            type = "flat_dt";
+            arch = "arm64";
+            compression = "none";
+            load = <FDT_LOAD_ADDR>;
+        };
+        initrd {
+            description = "Ramdisk";
+            data = /incbin/("rootfs.cpio");
+            type = "ramdisk";
+            arch = "arm64";
+            os = "linux";
+            compression = "none";
+            load = <INITRD_LOAD_ADDR>;
+        };
+    };
+
+    configurations {
+        default = "normal-boot";
+
+        normal-boot {
+            description = "Normal boot config";
+            kernel = "kernel";
+            fdt = "fdt";
+            ramdisk = "initrd";
+        };
+    };
+};
