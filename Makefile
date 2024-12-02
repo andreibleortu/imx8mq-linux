@@ -40,7 +40,7 @@ CONFIGS_PATH = $(shell realpath $(CONFIGS_DIR))
 $(CONFIGS_DIR):
 	sudo apt install build-essential libusb-1.0-0-dev libbz2-dev \
 	libzstd-dev pkg-config cmake libssl-dev g++ zlib1g-dev \
-	libtinyxml2-dev libzip-dev unzip
+	libtinyxml2-dev libzip-dev unzip bison flex
 
 
 # Trusted Firmware-A (BL31)
