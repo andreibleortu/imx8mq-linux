@@ -1,3 +1,5 @@
+# Makefile & configs for building U-Boot and Linux for TechNexion's PICO-PI-IMX8M
+
 These configuration files are a result of the [2024 ARM Summer School](https://ocw.cs.pub.ro/courses/ass), held in the Faculty of Automatic Control and Computer Science of the POLITEHNICA University of Bucharest and sponsored by Google.
 
 **Warning:** This Makefile is intended to be run on a Debian-based Linux system. It might wipe unintended disks. Inspect the code for the `9-diskimg` and `boot-linux` stages and make sure you don't have disks matching those modified by the script. Running these stages may require root privileges.
