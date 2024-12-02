@@ -65,7 +65,7 @@ DISKIMG_STAMP = $(DISKIMG_DIR)/.stamp
 	
 # Install necessary dependencies
 $(CONFIGS_DIR):
-	@packages="build-essential libusb-1.0-0-dev libbz2-dev libzstd-dev pkg-config cmake libssl-dev g++ zlib1g-dev libtinyxml2-dev libzip-dev unzip bison flex"; \
+	@packages="build-essential libusb-1.0-0-dev libbz2-dev libzstd-dev pkg-config cmake libssl-dev g++ zlib1g-dev libtinyxml2-dev libzip-dev unzip bison flex device-tree-compiler"; \
 	for pkg in $$packages; do \
 		if ! dpkg -s $$pkg >/dev/null 2>&1; then \
 			missing_packages="$$missing_packages $$pkg"; \
